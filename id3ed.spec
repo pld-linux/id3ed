@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Applications/Sound
 Source0:	http://www.azstarnet.com/~donut/programs/id3ed/%{name}-%{version}.tar.gz
+# Source0-md5:	fc0df31ef4ad90b83ee133929afbcc83
 Patch0:		%{name}-ncurses.patch
 Patch1:		%{name}-DESTDIR.patch
 URL:		http://www.azstarnet.com/~donut/programs/id3ed.html
