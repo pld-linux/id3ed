@@ -2,14 +2,16 @@ Summary:	id3ed - edit id3 description tags in mp3 files
 Summary(pl):	Edytor opisów plików mp3
 Name:		id3ed
 Version:	1.10.3
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/Sound
 Source0:	http://www.azstarnet.com/~donut/programs/id3ed/%{name}-%{version}.tar.gz
 Patch0:		%{name}-ncurses.patch
 Patch1:		%{name}-DESTDIR.patch
+Patch2:		%{name}-gcc3.patch
 URL:		http://www.azstarnet.com/~donut/programs/id3ed.html
 BuildRequires:	autoconf
+BuildRequires:	libstdc++-devel
 BuildRequires:	ncurses-devel
 BuildRequires:	readline-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -35,10 +37,10 @@ koñcu pliku d¼wiêkowego.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 %{__autoconf}
-CXX="%{__cc}"; export CXX
 %configure
 %{__make} \
 	CPPFLAGS="-I."
@@ -49,13 +51,11 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf Changelog README
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc Changelog README
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*

@@ -1,0 +1,31 @@
+--- id3ed-1.10.3/id3ed.cc.orig	Mon Sep 17 02:24:23 2001
++++ id3ed-1.10.3/id3ed.cc	Sun Oct  6 11:52:56 2002
+@@ -488,7 +488,7 @@
+ 			printf("(tag v1.1%s)\n",id3.v11.tracknum?"":"?");
+ 		else
+ 			printf("(tag v1.0)\n");
+-#define PRINTINFO(f) printf("%s: %.*s\n",#f, (int)sizeof(id3. ## f), id3. ## f)
++#define PRINTINFO(f) printf("%s: %.*s\n",#f, (int)sizeof(id3. f), id3. f)
+ 		PRINTINFO(songname);
+ 		PRINTINFO(artist);
+ 		PRINTINFO(album);
+--- id3ed-1.10.3/misc.cc.orig	Fri Jun 11 02:25:30 1999
++++ id3ed-1.10.3/misc.cc	Sun Oct  6 11:53:21 2002
+@@ -13,7 +13,7 @@
+    }
+    return 0;
+ }
+-int dowrite(int handle, const void * buf, ssize_t len,const char *name,const char *name2=""){
++int dowrite(int handle, const void * buf, ssize_t len,const char *name,const char *name2){
+    ssize_t i;
+    if ((i=write(handle,buf,len))!=len){
+       fprintf(stderr,"Error writing %s %s (%i/%i): %s\n",name,name2,i,len,strerror(errno));
+@@ -21,7 +21,7 @@
+    }
+    else return 0;
+ }
+-int doopen(int &handle,const char * name,int access,int mode=0) {
++int doopen(int &handle,const char * name,int access,int mode) {
+    if ((handle=open(name,access,mode))==-1){
+       fprintf(stderr,"Error opening %s: %s\n",name,strerror(errno));
+       return -1;
