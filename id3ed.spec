@@ -27,7 +27,7 @@ CXXFLAGS="$RPM_OPT_FLAGS -fno-rtti -I/usr/include/ncurses"
 LDFLAGS="-s"
 export CXXFLAGS LDFLAGS
 %configure
-make
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
