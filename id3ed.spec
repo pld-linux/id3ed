@@ -6,6 +6,9 @@ License:	GPL
 Group:		Applications/Sound
 Group(pl):	Aplikacje/D¼wiêk
 Source0:	http://www.azstarnet.com/~donut/programs/id3ed/%{name}-%{version}.tar.gz
+Patch0:		%{name}-ncurses.patch
+Patch1:		%{name}-config_h-fix.patch
+Patch2:		%{name}-DESTDIR.patch
 URL:		http://www.azstarnet.com/~donut/programs/id3ed.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -19,11 +22,13 @@ long and is located at the end of the file.
 
 %prep
 %setup -q
-%patch -p1
+%patch0 -p1
+%patch1 -p1
+%patch2 -p1
 
 %build
 autoconf
-CXXFLAGS="$RPM_OPT_FLAGS -fno-rtti -I/usr/include/ncurses"
+CXXFLAGS="$RPM_OPT_FLAGS -fno-rtti -fno-exceptions -fno-implicit-templates"
 export CXXFLAGS
 %configure
 %{__make}
