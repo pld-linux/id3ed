@@ -1,7 +1,7 @@
 Summary:	id3ed - edit id3 description tags in mpeg3 files
 Summary(pl):	Edytor opisów plików mpeg3
 Name:		id3ed
-Version:	1.10.2
+Version:	1.10.3
 Release:	1
 License:	GPL
 Group:		Applications/Sound
@@ -9,8 +9,8 @@ Group(de):	Applikationen/Laut
 Group(pl):	Aplikacje/D¼wiêk
 Source0:	http://www.azstarnet.com/~donut/programs/id3ed/%{name}-%{version}.tar.gz
 Patch0:		%{name}-ncurses.patch
-Patch1:		%{name}-config_h-fix.patch
-Patch2:		%{name}-DESTDIR.patch
+Patch1:		%{name}-DESTDIR.patch
+BuildRequires:	ncurses-devel
 URL:		http://www.azstarnet.com/~donut/programs/id3ed.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -35,13 +35,12 @@ koñcu pliku d¼wiêkowego.
 %setup -q
 %patch0 -p1
 %patch1 -p1
-%patch2 -p1
 
 %build
 autoconf
-CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions -fno-implicit-templates"
+CXX=%{__cc}; export CXX
 %configure
-%{__make}
+%{__make} 
 
 %install
 rm -rf $RPM_BUILD_ROOT
