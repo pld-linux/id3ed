@@ -1,0 +1,12 @@
+diff -Nru id3ed-1.10.1/config.h.in id3ed-1.10.1.new/config.h.in
+--- id3ed-1.10.1/config.h.in	Wed Feb 23 02:24:58 2000
++++ id3ed-1.10.1.new/config.h.in	Thu Sep  7 21:17:03 2000
+@@ -1,8 +1,5 @@
+ /* config.h.in.  Generated automatically from configure.in by autoheader.  */
+ 
+-/* Define to empty if the keyword does not work.  */
+-#undef const
+-
+ /* Define to `long' if <sys/types.h> doesn't define.  */
+ #undef off_t
+ 
