@@ -26,12 +26,11 @@ of the file.
 
 %description -l pl
 id3ed umo¿liwia edycjê znaczników "id3" umieszczanych w plikach mpeg
-warstwy 3 (mp3). Znaczniki id3 sta³y siê standardem jesli chodzi o
-umieszczanie informacji o piosence w plikach mp3 i wiekszo¶æ
-odtwarzaczy potrafi je odczytaæ. Jednocze¶nie ich obecno¶æ nie
-powoduje ¿adnych problemów w odtwarzaczach nie obs³uguj±cych tych
-znaczników. Znacznik "id3" zajmuje 128 bajtów i jest zlokalizowany na
-koñcu pliku d¼wiêkowego.
+warstwy 3 (mp3). Znaczniki id3 sta³y siê standardem je¶li chodzi o 
+umieszczanie informacji o piosence w plikach mp3 i wiêkszo¶æ odtwarzaczy 
+potrafi je odczytaæ. Jednocze¶nie ich obecno¶æ nie powoduje ¿adnych 
+problemów w odtwarzaczach nie obs³uguj±cych tych znaczników. Znacznik 
+"id3" zajmuje 128 bajtów i jest zlokalizowany na koñcu pliku d¼wiêkowego.
 
 %prep
 %setup -q
