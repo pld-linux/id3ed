@@ -6,7 +6,8 @@ diff -Nru id3ed-1.10/configure.in id3ed-1.10.new/configure.in
  dnl Checks for libraries.
  have_term_stuff=no
 -AC_CHECK_LIB(curses, tputs)
+-if test "$ac_cv_lib_curses_tputs" = "yes"; then
 +AC_CHECK_LIB(ncurses, tputs)
- if test "$ac_cv_lib_curses_tputs" = "yes"; then
++if test "$ac_cv_lib_ncurses_tputs" = "yes"; then
   	have_term_stuff=yes
  fi
