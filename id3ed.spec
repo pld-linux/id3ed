@@ -1,4 +1,5 @@
 Summary:	id3ed - edit id3 description tags in mpeg3 files
+Summary(pl):	Edytor opisów plików mpeg3
 Name:		id3ed
 Version:	1.10.2
 Release:	1
@@ -29,7 +30,7 @@ long and is located at the end of the file.
 
 %build
 autoconf
-CXXFLAGS="%{!?debug:$RPM_OPT_FLAGS -fno-rtti -fno-exceptions -fno-implicit-templates}%{?debug:-O0 -g}"
+CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions -fno-implicit-templates"
 %configure
 %{__make}
 
@@ -39,8 +40,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
-	Changelog README
+gzip -9nf Changelog README
 
 %clean
 rm -rf $RPM_BUILD_ROOT
