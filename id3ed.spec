@@ -29,7 +29,7 @@ long and is located at the end of the file.
 
 %build
 autoconf
-CXXFLAGS="%{!?debug:$RPM_OPT_FLAGS -fno-rtti -fno-exceptions -fno-implicit-templates}%{?debug:-O -g}"
+CXXFLAGS="%{!?debug:$RPM_OPT_FLAGS -fno-rtti -fno-exceptions -fno-implicit-templates}%{?debug:-O0 -g}"
 %configure
 %{__make}
 
