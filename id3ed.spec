@@ -37,7 +37,7 @@ koñcu pliku d¼wiêkowego.
 %patch1 -p1
 
 %build
-autoconf
+%{__autoconf}
 CXX="%{__cc}"; export CXX
 %configure
 %{__make} \
