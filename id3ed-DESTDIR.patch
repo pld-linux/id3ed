@@ -1,6 +1,5 @@
-diff -Nru id3ed-1.10.1/Makefile.in id3ed-1.10.1.new/Makefile.in
---- id3ed-1.10.1/Makefile.in	Thu Sep  7 06:09:33 2000
-+++ id3ed-1.10.1.new/Makefile.in	Thu Sep  7 21:35:46 2000
+--- id3ed-1.10.3/Makefile.in~	Thu Sep 20 06:45:11 2001
++++ id3ed-1.10.3/Makefile.in	Thu Sep 20 06:45:59 2001
 @@ -14,6 +14,7 @@
  bindir=@bindir@
  mandir=@mandir@
@@ -9,7 +8,7 @@ diff -Nru id3ed-1.10.1/Makefile.in id3ed-1.10.1.new/Makefile.in
  
  DESTDIR=
  
-@@ -22,14 +23,15 @@
+@@ -22,13 +23,14 @@
  OBJS=id3ed.o misc.o
  
  id3ed: $(OBJS) .depend
@@ -20,11 +19,9 @@ diff -Nru id3ed-1.10.1/Makefile.in id3ed-1.10.1.new/Makefile.in
  	$(CXX) -MM *.cc > .depend
  
  install: all
--	$(install) -s -o root -g bin -m 0755 id3ed $(DESTDIR)$(bindir)
--	$(install) -o root -g bin -m 0644 id3ed.1 $(DESTDIR)$(mandir)/man1
+-	$(install) -s -m 0755 id3ed $(DESTDIR)$(bindir)
 +	$(install) -d $(DESTDIR)$(bindir) $(DESTDIR)$(mandir)/man1
-+	$(install) id3ed $(DESTDIR)$(bindir)
-+	$(install) -m 0644 id3ed.1 $(DESTDIR)$(mandir)/man1
++	$(install) -m 0755 id3ed $(DESTDIR)$(bindir)
+ 	$(install) -m 0644 id3ed.1 $(DESTDIR)$(mandir)/man1
  
  uninstall:
- 	-rm $(DESTDIR)$(bindir)/id3ed
