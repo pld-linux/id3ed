@@ -1,0 +1,12 @@
+diff -Nru id3ed-1.10/configure.in id3ed-1.10.new/configure.in
+--- id3ed-1.10/configure.in	Wed Feb 23 02:48:11 2000
++++ id3ed-1.10.new/configure.in	Mon Jun  5 05:53:31 2000
+@@ -12,7 +12,7 @@
+ 
+ dnl Checks for libraries.
+ have_term_stuff=no
+-AC_CHECK_LIB(curses, tputs)
++AC_CHECK_LIB(ncurses, tputs)
+ if test "$ac_cv_lib_curses_tputs" = "yes"; then
+  	have_term_stuff=yes
+ fi
