@@ -39,7 +39,7 @@ koñcu pliku d¼wiêkowego.
 autoconf
 CXX="%{__cc}"; export CXX
 %configure
-%{__make} 
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
