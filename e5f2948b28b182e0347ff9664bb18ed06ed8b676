@@ -1,0 +1,5 @@
+- updated to 1.10,
+- rewrited in PLD style,
+NOT: not compiles (bugs in source code).
+
+Based on Ryan Weaver <ryanw@infohwy.com> spec file.
