@@ -1,12 +1,12 @@
 Summary:	id3ed - edit id3 description tags in mpeg3 files
 Name:		id3ed
-Version:	1.10
+Version:	1.10.1
 Release:	1
 License:	GPL
 Group:		Applications/Sound
 Group(pl):	Aplikacje/D¼wiêk
-Source0:	http://www.azstarnet.com/~donut/id3ed/%{name}-%{version}.tar.gz
-URL:		http://www.azstarnet.com/~donut/programs.html
+Source0:	http://www.azstarnet.com/~donut/programs/id3ed/%{name}-%{version}.tar.gz
+URL:		http://www.azstarnet.com/~donut/programs/id3ed.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -24,8 +24,7 @@ long and is located at the end of the file.
 %build
 autoconf
 CXXFLAGS="$RPM_OPT_FLAGS -fno-rtti -I/usr/include/ncurses"
-LDFLAGS="-s"
-export CXXFLAGS LDFLAGS
+export CXXFLAGS
 %configure
 %{__make}
 
