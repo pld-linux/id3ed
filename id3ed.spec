@@ -1,5 +1,5 @@
-Summary:	id3ed - edit id3 description tags in mpeg3 files
-Summary(pl):	Edytor opisów plików mpeg3
+Summary:	id3ed - edit id3 description tags in mp3 files
+Summary(pl):	Edytor opisów plików mp3
 Name:		id3ed
 Version:	1.10.3
 Release:	1
@@ -10,17 +10,18 @@ Group(pl):	Aplikacje/D¼wiêk
 Source0:	http://www.azstarnet.com/~donut/programs/id3ed/%{name}-%{version}.tar.gz
 Patch0:		%{name}-ncurses.patch
 Patch1:		%{name}-DESTDIR.patch
-BuildRequires:	ncurses-devel
 URL:		http://www.azstarnet.com/~donut/programs/id3ed.html
+BuildRequires:	autoconf
+BuildRequires:	ncurses-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-id3ed edits the "id3" tag for mpeg layer3 files. The mpeg3
-specification does not provide any method for storing song
-information, however the id3 tag has become a standard method for
-doing this, and most mp3 players can read the tag. It will not cause
-any errors in players that do not support it. The tag is 128 bytes
-long and is located at the end of the file.
+id3ed edits the "id3" tag for mpeg layer3 files. The mp3 specification
+does not provide any method for storing song information, however the
+id3 tag has become a standard method for doing this, and most mp3
+players can read the tag. It will not cause any errors in players that
+do not support it. The tag is 128 bytes long and is located at the end
+of the file.
 
 %description -l pl
 id3ed umo¿liwia edycjê znaczników "id3" umieszczanych w plikach mpeg
@@ -38,7 +39,7 @@ koñcu pliku d¼wiêkowego.
 
 %build
 autoconf
-CXX=%{__cc}; export CXX
+CXX="%{__cc}"; export CXX
 %configure
 %{__make} 
 
