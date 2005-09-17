@@ -2,7 +2,7 @@ Summary:	id3ed - edit id3 description tags in MP3 files
 Summary(pl):	Edytor opisów plików MP3
 Name:		id3ed
 Version:	1.10.4
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/Sound
 Source0:	http://www.azstarnet.com/~donut/programs/id3ed/%{name}-%{version}.tar.gz
