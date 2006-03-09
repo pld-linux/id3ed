@@ -1,0 +1,3 @@
+- updated to 1.10.2,
+- use new rpm auromation suit,
+- spec %{debug} ready.
