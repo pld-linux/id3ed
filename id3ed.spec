@@ -1,5 +1,5 @@
 Summary:	id3ed - edit id3 description tags in MP3 files
-Summary(pl):	Edytor opisów plików MP3
+Summary(pl.UTF-8):   Edytor opisÃ³w plikÃ³w MP3
 Name:		id3ed
 Version:	1.10.4
 Release:	3
@@ -24,13 +24,13 @@ players can read the tag. It will not cause any errors in players that
 do not support it. The tag is 128 bytes long and is located at the end
 of the file.
 
-%description -l pl
-id3ed umo¿liwia edycjê znaczników "id3" umieszczanych w plikach mpeg
-warstwy 3 (MP3). Znaczniki id3 sta³y siê standardem je¶li chodzi o 
-umieszczanie informacji o piosence w plikach MP3 i wiêkszo¶æ odtwarzaczy 
-potrafi je odczytaæ. Jednocze¶nie ich obecno¶æ nie powoduje ¿adnych 
-problemów w odtwarzaczach nie obs³uguj±cych tych znaczników. Znacznik 
-"id3" zajmuje 128 bajtów i jest zlokalizowany na koñcu pliku d¼wiêkowego.
+%description -l pl.UTF-8
+id3ed umoÅ¼liwia edycjÄ™ znacznikÃ³w "id3" umieszczanych w plikach mpeg
+warstwy 3 (MP3). Znaczniki id3 staÅ‚y siÄ™ standardem jeÅ›li chodzi o 
+umieszczanie informacji o piosence w plikach MP3 i wiÄ™kszoÅ›Ä‡ odtwarzaczy 
+potrafi je odczytaÄ‡. JednoczeÅ›nie ich obecnoÅ›Ä‡ nie powoduje Å¼adnych 
+problemÃ³w w odtwarzaczach nie obsÅ‚ugujÄ…cych tych znacznikÃ³w. Znacznik 
+"id3" zajmuje 128 bajtÃ³w i jest zlokalizowany na koÅ„cu pliku dÅºwiÄ™kowego.
 
 %prep
 %setup -q
